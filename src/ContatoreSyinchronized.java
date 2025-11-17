@@ -4,7 +4,9 @@ public class ContatoreSyinchronized {
 
     public void increment() {
         synchronized (lock) {
-            count++;
+            while (count < 5000) {
+                count++;
+            }
         }
     }
 

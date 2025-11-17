@@ -2,7 +2,9 @@ public class Contatore {
     private int count = 0;
 
     public synchronized void increment() {
-        count++;
+        while (count < 5000) {
+            count++;
+        }
     }
 
     public int getCount() {
